@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Mug Gallery - Mug Theory</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gallery-page">
+
+
+<div class="particles"></div>
+
+
+
+  <div class="sidebar">
+    <div class="logo">
+      <span class="flower">✿</span>
+      <a href="index.html">
+        <h1>MUG THEORY</h1>
+      </a>
+    </div>
+
+    <nav>
+      <a href="introduction.html">Introduction</a>
+      <a href="gallery.html" class="active">Mug Gallery</a>
+      <div class="filters">
+  <p>Filter</p>
+  <button onclick="filterSelection('all')">All</button>
+  <button onclick="filterSelection('warm')">Warm</button>
+  <button onclick="filterSelection('cool')">Cool</button>
+</div>
+    </nav>
+  </div>
+
+
+
+  <div class="gallery">
+
+<div class="item warm">
+  <div class="image-box">
+    <a href="blush.html">
+      <img src="images/img1.jpg.webp" alt="Clickable image">
+    </a>
+    <div class="particles-hover"></div>
+  </div>
+  <p>Blush Petal Stack</p>
+</div>
+
+    <div class="item warm">
+      <div class="image-box">
+    <img src="images/img2.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Cherry Loop Mug</p>
+    </div>
+
+    <div class="item cool">
+      <div class="image-box">
+    <img src="/images/img3.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Indigo Bloom Cup</p>
+    </div>
+
+    <div class="item cool">
+      <div class="image-box">
+    <img src="images/img4.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Mist Wave Bowl</p>
+    </div>
+
+    <div class="item cool">
+     <div class="image-box">
+    <img src="/images/img5.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Line Garden Cup</p>
+    </div>
+
+    <div class="item cool">
+    <div class="image-box">
+    <img src="images/img6.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Olive Shadow Stack</p>
+    </div>
+
+    <div class="item cool">
+    <div class="image-box">
+    <img src="/images/img7.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Skyflower Tumbler</p>
+    </div>
+
+    <div class="item warm">
+    <div class="image-box">
+    <img src="/images/img8.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Drift Stripe Mug</p>
+    </div>
+
+    <div class="item warm">
+    <div class="image-box">
+    <img src="/images/img9.jpg" alt="">
+    <div class="particles-hover"></div>
+  </div>
+      <p>Sunset Petal Cup</p>
+    </div>
+
+  </div>
+
+  
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-left">
+        <h3>Mug Theory</h3>
+        <p>Exploring handmade mugs, pottery, and design inspiration.</p>
+      </div>
+
+      <div class="footer-links">
+        <a>Home</a>
+        <a>Introduction</a>
+        <a>Gallery</a>
+      </div>
+
+      <div class="footer-right">
+        <a>Instagram</a>
+        <a>Pinterest</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Mug Theory. All rights reserved.</p>
+    </div>
+  </footer>
+  
+ 
+  <button id="backToTop">Back to top</button>
+  <script>
+
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+<script>
+function filterSelection(category) {
+  const items = document.querySelectorAll(".item");
+
+  items.forEach(item => {
+    if (category === "all") {
+      item.classList.remove("hide");
+    } else {
+      if (item.classList.contains(category)) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    }
+  });
+}
+</script>
+
+
+<script src="js/particles.min.js"></script>
+<script src="/js/particles-hover.js"></script>
+
+
+
+
+</body>
+
+</html>

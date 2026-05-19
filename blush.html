@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Mug Theory</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+
+  <div class="sidebar">
+    <div class="logo">
+      <span class="flower">✿</span>
+      <a href="index.html">
+        <h1>MUG THEORY</h1>
+      </a>
+    </div>
+    <nav>
+      <a href="introduction.html">Introduction</a>
+      <a href="gallery.html">Mug Gallery</a>
+    </nav>
+
+    </nav>
+  </div>
+
+
+  <div class="main">
+
+    <div class="content">
+
+    
+<img src="images/main image.jpeg.webp" class="main-img">
+        
+
+      <h3>Blush Petal Stack</h3>
+      <p>
+        Muted greens and reds. The organic shapes and slightly uneven rims give each piece a natural,
+        tactile quality, while the layered glazing creates subtle depth and variation. Playful yet delicate,
+        it feels both functional and expressive - perfect for everyday use with an artisanal touch.
+      </p>
+
+      <img src="images/detail.jpg.webp" class="detail-img">
+
+      <img src="images/group image.jpeg.webp" class="main-img">
+
+      <p>
+        Each piece is shaped by hand, allowing for slight variations that make every cup unique.
+        The surface decoration appears to be applied using a free, gestural technique, where pigments
+        are brushed or dabbed onto the clay before firing. During the kiln process, the glazes melt
+        and fuse into the surface, softening edges and creating the diffused, almost watercolour-like
+        finish that gives the mug its character.
+      </p>
+
+      <img src="images/main image 2.jpeg.webp" class="detail-img">
+
+     <button id="backToTop">Back to top</button>
+  
+  <script>
+// back to top button
+const backToTop = document.getElementById("backToTop");
+
+// show button after scrolling a bit
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 200) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+// scroll back up when clicked
+backToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+</script>
+
+
+<script>
+// simple filter function
+function filterSelection(category) {
+  const items = document.querySelectorAll(".item");
+
+  items.forEach(function(item) {
+    // show everything if "all" is selected
+    if (category === "all") {
+      item.classList.remove("hide");
+    } else {
+      // otherwise check if item matches category
+      if (item.classList.contains(category)) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    }
+  });
+}
+</script>
+
+    </div>
+
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-left">
+        <h3>Mug Theory</h3>
+        <p>Exploring handmade mugs, pottery, and design inspiration.</p>
+      </div>
+
+      <div class="footer-links">
+        <a>Home</a>
+        <a>Introduction</a>
+        <a>Gallery</a>
+      </div>
+
+      <div class="footer-right">
+        <a>Instagram</a>
+        <a>Pinterest</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Mug Theory. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
